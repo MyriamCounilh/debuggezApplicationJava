@@ -6,6 +6,3 @@ J'ai commencé par lire le code d'Alex. Il rencontre un problème avec intégrer
   Il a également fait une faute pour la variable Rash à la ligne 27. Il avait écrit Rush.
 * 2ème tâche : Intégrer l'orde alphabétique
   * J'ai inversé l'ordre entre la ligne 39 et 41 dans le fichier AnalyticsCounter
-
-
-
