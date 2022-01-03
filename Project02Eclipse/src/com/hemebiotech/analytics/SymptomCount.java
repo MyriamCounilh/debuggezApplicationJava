@@ -9,7 +9,6 @@ import java.util.TreeMap;
 public class SymptomCount implements ISymptomCount {
 
     /**
-     *
      * @param listNotCounted
      * create treemap and for counter symptom
      *
