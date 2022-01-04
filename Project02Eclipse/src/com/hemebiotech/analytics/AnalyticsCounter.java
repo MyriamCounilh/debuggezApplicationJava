@@ -1,41 +1,28 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class AnalyticsCounter {
-	private static int headacheCount = 0;	// initialize to 0
-	private static int rashCount = 0;		// initialize to 0
-	private static int pupilCount = 0;		// initialize to 0
-	
-	public static void main(String args[]) throws Exception {
-		// first get input
-		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
-		String line = reader.readLine();
+	/**
+	 * @param args read interface
+	 * @throws IOException teat Exception
+	 *
+	 */
+	public static void main(String[] args) throws IOException {
 
-		int i = 0;	// set i to 0
-		while (line != null) {
-			i++;	// increment i
-			System.out.println("symptom from file: " + line);
-			if (line.equals("headache")) {
-				headacheCount++;
-			}
-			else if (line.equals("rash")) {
-				rashCount++;
-			}
-			else if (line.contains("pupils")) {
-				pupilCount++;
-			}
+		// To recover symptoms from a class
+		ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
+		List<String> listNotCounted = reader.getSymptoms();
 
-			line = reader.readLine();	// get another symptom
-		}
-		
-		// next generate output
-		FileWriter writer = new FileWriter ("result.out");
-		writer.write("dialated pupils: " + pupilCount + "\n");
-		writer.write("headache: " + headacheCount + "\n");
-		writer.write("rash: " + rashCount + "\n");
-		writer.close();
+		// Count and sort from a class
+		ISymptomCount treater = new SymptomCount();
+		Map<String, Integer> treeMap = treater.getSymptomsCount(listNotCounted);
+
+		// Write the result from a class
+		ISymptomWriter writer = new SymptomWriterToFile();
+		writer.writeSymptom(treeMap);
+
 	}
 }
