@@ -11,12 +11,15 @@ et le décompte des symptômes.
 
 ### Création d'une branche feature
 
- Suivre les recommandations de la directrice
+#### Suivre les recommandations de la directrice : 
 
 - Nettoyer le code d'Alex, en supprimant les variables inutiles
-- Supprimer les commentaires qui ne sert à rien
-  * 1er étape : Récupérer les symptômes depuis une classe
-  * 2ème étape : Lire les symptômes
-  * 3ème étape : Compter les symptômes
+- Supprimer les commentaires qui ne servent à rien
+  - Récupérer les symptômes depuis une classe
+  - Lire les symptômes "ISymptomReader"
+  - Compter les symptômes "ISymptomCount"
+  - Ecriture des symptômes "IsymptomWriter"
+  
+- Création de la JavaDoc
 
 

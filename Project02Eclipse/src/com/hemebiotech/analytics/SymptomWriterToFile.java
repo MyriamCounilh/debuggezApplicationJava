@@ -2,7 +2,6 @@ package com.hemebiotech.analytics;
 
 import java.io.*;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * Simple implementation for write symptom
@@ -10,10 +9,10 @@ import java.util.TreeMap;
 public class SymptomWriterToFile implements ISymptomWriter {
     /**
      * @param writeTreeMap
-     * Create try catch to treat exception
+     * Ecrit les symptômes dans un fichier result.out
      */
     @Override
-    public void writeSymptom(TreeMap<String, Integer> writeTreeMap) {
+    public void writeSymptom(Map<String, Integer> writeTreeMap) {
 
         try (FileWriter fileWriter = new FileWriter("result.out")){
            for (Map.Entry<String, Integer> symptomUnique : writeTreeMap.entrySet()) {

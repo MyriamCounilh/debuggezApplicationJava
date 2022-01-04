@@ -1,7 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 
 /**
  * Count and sort form a class
@@ -15,6 +15,6 @@ public interface ISymptomCount {
      * @return TreeMap create
      * @author Myriam Counilh
      */
-    TreeMap<String, Integer> getSymptomsCount(List<String> listNotCounted);
+    Map<String, Integer> getSymptomsCount(List<String> listNotCounted);
 
 }

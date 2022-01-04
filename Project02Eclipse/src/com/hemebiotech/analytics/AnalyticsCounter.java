@@ -2,7 +2,7 @@ package com.hemebiotech.analytics;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 
 public class AnalyticsCounter {
 	/**
@@ -18,7 +18,7 @@ public class AnalyticsCounter {
 
 		// Count and sort from a class
 		ISymptomCount treater = new SymptomCount();
-		TreeMap<String, Integer> treeMap = treater.getSymptomsCount(listNotCounted);
+		Map<String, Integer> treeMap = treater.getSymptomsCount(listNotCounted);
 
 		// Write the result from a class
 		ISymptomWriter writer = new SymptomWriterToFile();

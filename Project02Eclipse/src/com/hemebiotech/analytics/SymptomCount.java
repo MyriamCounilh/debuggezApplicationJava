@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -16,7 +17,7 @@ public class SymptomCount implements ISymptomCount {
      * @author Myriam Counilh
      */
     @Override
-    public TreeMap<String, Integer> getSymptomsCount(List<String> listNotCounted) {
+    public Map<String, Integer> getSymptomsCount(List<String> listNotCounted) {
 
         TreeMap<String, Integer> treemap = new TreeMap<>();
 
