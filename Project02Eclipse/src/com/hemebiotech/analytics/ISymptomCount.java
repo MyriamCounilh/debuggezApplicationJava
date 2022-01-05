@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Count and sort form a class
+ * Compter et trier à partir d'une classe
  */
 public interface ISymptomCount {
 
     /**
-     * @param listNotCounted
-     * Create TreeMap for sorted in ascending order
+     * Retourne la Map contenant les symptômes avec leur occurrence par ordre alphabétique
+     * @param listNotCounted Contient la liste des symptômes
      *
-     * @return TreeMap create
+     * @return Map contenant les symptômes avec leur occurrence par ordre alphabétique
      * @author Myriam Counilh
      */
     Map<String, Integer> getSymptomsCount(List<String> listNotCounted);
