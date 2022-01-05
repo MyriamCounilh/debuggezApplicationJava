@@ -5,10 +5,9 @@ import java.util.Map;
 
 public class AnalyticsCounter {
 
-
 	/**
 	 * @param args read interface
-	 *
+	 * Création de variable final
 	 */
 	public static void main(String[] args) {
 
@@ -17,13 +16,13 @@ public class AnalyticsCounter {
 
 		Analytic analytic = new Analytic(new ReadSymptomDataFromFile(readSymptom), new SymptomCount(), new SymptomWriterToFile(writeSymptom));
 
-		// To recover symptoms from a class
+		// Pour récupérer les symptômes d'une classe
 		List<String> listNotCounted = analytic.getSymptoms();
 
-		// Count and sort from a class
+		// Compter et trier à partir d'une classe
 		Map<String, Integer> treeMap = analytic.getSymptomsCount(listNotCounted);
 
-		// Write the result from a class
+		// Ecrire le résultat d'une classe
 		analytic.writeSymptom(treeMap);
 
 	}

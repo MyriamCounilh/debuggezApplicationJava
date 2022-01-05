@@ -4,13 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Count and sort form a class
+ * Compter et trier à partir d'une classe
  */
 public interface ISymptomCount {
 
     /**
-     * @param listNotCounted
-     * Create TreeMap for sorted in ascending order
+     * @param listNotCounted Créer treeMap pour trier par ordre croissant
      *
      * @return TreeMap create
      * @author Myriam Counilh

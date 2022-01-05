@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * Simple implementation for write symptom
+ * @author myriam
+ * Création d'une variable final
  */
 public class SymptomWriterToFile implements ISymptomWriter {
 
@@ -15,8 +17,11 @@ public class SymptomWriterToFile implements ISymptomWriter {
     }
 
     /**
+     * Ecrit les symptômes
      * @param writeTreeMap
-     * Ecrit les symptômes dans un fichier result.out
+     * Try Ecrire les symptômes depuis la variable final
+     * La boucle For Afin d'écrire chaque symptôme avec leur occurrence, ajoute un saut de ligne
+     * Catch pour gérer une exception.
      */
     @Override
     public void writeSymptom(Map<String, Integer> writeTreeMap) {

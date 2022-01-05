@@ -2,9 +2,8 @@ package com.hemebiotech.analytics;
 
 import java.util.Map;
 
-
 /**
- * Write of result the symptom
+ * Ecrire le résultat du symptôme
  * @author Myriam Counilh
  */
 public interface ISymptomWriter {

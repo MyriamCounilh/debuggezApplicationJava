@@ -5,16 +5,16 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * simple implementation for count symptom
+ * Simple implementation pour compter les symptômes
+ * @author Myriam Counilh
  */
 public class SymptomCount implements ISymptomCount {
 
     /**
-     * @param listNotCounted
-     * create treemap and for counter symptom
      *
-     * @return treemap
-     * @author Myriam Counilh
+     * @param listNotCounted Créer treeMap pour trier par ordre croissant
+     * La bouche for ajoute l'occurence à chaque symptômes s'il existe déjà
+     * @return treemap Contient les symptômes ainsi que leur occurrence
      */
     @Override
     public Map<String, Integer> getSymptomsCount(List<String> listNotCounted) {
