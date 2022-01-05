@@ -11,9 +11,8 @@ import java.util.TreeMap;
 public class SymptomCount implements ISymptomCount {
 
     /**
-     *
+     * Compte les symptômes
      * @param listNotCounted Créer treeMap pour trier par ordre croissant
-     * La bouche for ajoute l'occurence à chaque symptômes s'il existe déjà
      * @return treemap Contient les symptômes ainsi que leur occurrence
      */
     @Override
@@ -21,6 +20,7 @@ public class SymptomCount implements ISymptomCount {
 
         TreeMap<String, Integer> treemap = new TreeMap<>();
 
+        // La bouche for ajoute l'occurence à chaque symptômes s'il existe déjà
         for (String symptomName: listNotCounted) {
             if (!symptomName.isEmpty()) {
                 if (treemap.containsKey(symptomName)) {

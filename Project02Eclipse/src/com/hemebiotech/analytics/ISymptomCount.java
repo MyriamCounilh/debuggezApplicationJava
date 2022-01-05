@@ -9,9 +9,10 @@ import java.util.Map;
 public interface ISymptomCount {
 
     /**
-     * @param listNotCounted Créer treeMap pour trier par ordre croissant
+     * Retourne la Map contenant les symptômes avec leur occurrence par ordre alphabétique
+     * @param listNotCounted Contient la liste des symptômes
      *
-     * @return TreeMap create
+     * @return Map contenant les symptômes avec leur occurrence par ordre alphabétique
      * @author Myriam Counilh
      */
     Map<String, Integer> getSymptomsCount(List<String> listNotCounted);
