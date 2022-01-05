@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics;
 
-import java.io.IOException;
 import java.util.Map;
 
 
@@ -10,6 +9,5 @@ import java.util.Map;
  */
 public interface ISymptomWriter {
 
-    void writeSymptom(Map<String, Integer> writeTreeMap) throws IOException;
-
+    void writeSymptom(Map<String, Integer> writeTreeMap);
 }
