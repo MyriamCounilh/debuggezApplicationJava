@@ -1,28 +1,30 @@
 package com.hemebiotech.analytics;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 public class AnalyticsCounter {
+
+
 	/**
 	 * @param args read interface
-	 * @throws IOException teat Exception
 	 *
 	 */
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+
+		final String readSymptom = "symptoms.txt";
+		final String writeSymptom = "result.out";
+
+		Analytic analytic = new Analytic(new ReadSymptomDataFromFile(readSymptom), new SymptomCount(), new SymptomWriterToFile(writeSymptom));
 
 		// To recover symptoms from a class
-		ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
-		List<String> listNotCounted = reader.getSymptoms();
+		List<String> listNotCounted = analytic.getSymptoms();
 
 		// Count and sort from a class
-		ISymptomCount treater = new SymptomCount();
-		Map<String, Integer> treeMap = treater.getSymptomsCount(listNotCounted);
+		Map<String, Integer> treeMap = analytic.getSymptomsCount(listNotCounted);
 
 		// Write the result from a class
-		ISymptomWriter writer = new SymptomWriterToFile();
-		writer.writeSymptom(treeMap);
+		analytic.writeSymptom(treeMap);
 
 	}
 }

@@ -22,10 +22,12 @@ public class SymptomCount implements ISymptomCount {
         TreeMap<String, Integer> treemap = new TreeMap<>();
 
         for (String symptomName: listNotCounted) {
-            if (treemap.containsKey(symptomName)) {
-                treemap.put(symptomName, treemap.get(symptomName)+1);
-            } else {
-                treemap.put(symptomName, 1);
+            if (!symptomName.isEmpty()) {
+                if (treemap.containsKey(symptomName)) {
+                    treemap.put(symptomName, treemap.get(symptomName) + 1);
+                } else {
+                    treemap.put(symptomName, 1);
+                }
             }
         }
 

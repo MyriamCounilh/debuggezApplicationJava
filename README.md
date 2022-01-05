@@ -22,4 +22,6 @@ et le décompte des symptômes.
   
 - Création de la JavaDoc
 
+### Création d'une branche feature_createObjet
 
+- Mettre en application un début d'implémentation
