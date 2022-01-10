@@ -18,7 +18,7 @@ public class SymptomCount implements ISymptomCount {
     @Override
     public Map<String, Integer> getSymptomsCount(List<String> listNotCounted) {
 
-        TreeMap<String, Integer> treemap = new TreeMap<>();
+        TreeMap<String, Integer> treemap = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 
         // La bouche for ajoute l'occurence à chaque symptômes s'il existe déjà
         for (String symptomName: listNotCounted) {
